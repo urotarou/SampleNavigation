@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/nav_main_fragment">
+
+    <fragment
+        android:id="@+id/nav_main_fragment"
+        android:name="lab.uro.kitori.samplenavigation.MainFragment"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/act_main_to_hoge"
+            app:destination="@+id/nav_hoge_fragment" />
+
+        <action
+            android:id="@+id/act_main_to_piyo"
+            app:destination="@+id/nav_piyo_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_hoge_fragment"
+        android:name="lab.uro.kitori.samplenavigation.HogeFragment"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/act_hoge_to_piyo"
+            app:destination="@+id/nav_piyo_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_piyo_fragment"
+        android:name="lab.uro.kitori.samplenavigation.PiyoFragment"
+        tools:layout="@layout/fragment_main" />
+</navigation>
